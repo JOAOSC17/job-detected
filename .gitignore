@@ -1,0 +1,96 @@
+# === Global ===
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*.swo
+*.swn
+.env
+.env.*
+*.env.*
+.idea/
+.vscode/
+*.bak
+*.tmp
+*.orig
+*.lock
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.coverage
+.coverage.*
+.cache/
+.eggs/
+*.egg
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+htmlcov/
+.mypy_cache/
+.tox/
+.pytest_cache/
+
+# === Django ===
+db.sqlite3
+*.sqlite3
+media/
+staticfiles/
+local_settings.py
+
+# === Node / React ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.cache/
+dist/
+build/
+*.tsbuildinfo
+
+# === Lambdas ===
+lambdas/**/__pycache__/
+lambdas/**/node_modules/
+lambdas/**/.venv/
+lambdas/**/dist/
+lambdas/**/build/
+
+# === Terraform ===
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+crash.log
+override.tf
+override.tf.json
+terraform.tfvars
+terraform.tfvars.json
+
+# === AWS CDK ===
+cdk.out/
+cdk.context.json
+
+# === Scripts ===
+scripts/*.log
+scripts/*.tmp
+
+# === MacOS ===
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# === Coverage reports ===
+coverage.xml
+*.lcov
+*.lcov.info
+
+# === Others ===
+*.iml
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
