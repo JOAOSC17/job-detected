@@ -93,7 +93,7 @@ npm run dev
 ## 💬 Community & Feedback
 
 - 🐦 Twitter: [@jobdetected](https://twitter.com/jobdetected) (launching soon)
-- 💬 Discussions: [GitHub Discussions](https://github.com/JOAOSC17/job-detected/discussions)
+- 💬 Discussions: [GitHub Discussions](https://github.com/JOAOSC17/job-detected/discussions) (launching soon)
 - 💬 Chat: Discord (coming soon)
 
 ---
@@ -112,4 +112,4 @@ npm run dev
 This project is licensed under the [MIT License](LICENSE).
 
 
-Made with ❤️ by [@João Costa][https://x.com/itsjovi_dev] — from Latin America, for global devs 🌎
+Made with ❤️ by [@João Costa (jovi)](https://x.com/itsjovi_dev) — from Latin America, for global devs 🌎
