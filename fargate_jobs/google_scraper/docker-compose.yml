@@ -1,0 +1,15 @@
+services:
+  google-scraper:
+    build: .
+    container_name: google-scraper
+    env_file: .env
+    volumes:
+      - .:/app
+    entrypoint: ["python", "main.py"]
+  test:
+    build: .
+    container_name: google-scraper-test
+    env_file: .env
+    volumes:
+      - .:/app
+    command: pytest tests/
