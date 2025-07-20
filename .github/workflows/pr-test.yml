@@ -1,0 +1,36 @@
+name: PR Test - Google Scraper
+
+on:
+  pull_request:
+    paths:
+      - 'fargate_jobs/google_scraper/**'
+
+env:
+  AWS_REGION: us-east-1
+  IMAGE_NAME: google-scraper
+  IMAGE_TAG: test
+  IMAGE_URI: google-scraper:test
+  APIFY_KEY: ${{ secrets.APIFY_KEY }}
+  ACTOR_ID: ${{ secrets.ACTOR_ID }}
+
+jobs:
+  docker-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build Docker image for testing
+        run: |
+          docker build -t $IMAGE_URI fargate_jobs/google_scraper
+
+      - name: Run integration tests in container
+        env:
+          APIFY_KEY: ${{ secrets.APIFY_KEY }}
+          ACTOR_ID: ${{ secrets.ACTOR_ID }}
+        run: |
+          docker run --rm \
+            -e APIFY_KEY=$APIFY_KEY \
+            -e ACTOR_ID=$ACTOR_ID \
+            $IMAGE_URI pytest tests
